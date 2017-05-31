@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-  vector<string> pv{"Kant", "Plato", "Aristotle", "Kierkegard", "Hume"};
+  vector<string> pv = {"Kant", "Plato", "Aristotle", "Kierkegard", "Hume"};
 
   cout << "Unsorted..." << endl;
   for (string s : pv)
