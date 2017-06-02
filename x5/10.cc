@@ -4,11 +4,9 @@
 int main(int argc, char* argv[])
 {
   std::ifstream in{argv[1]};
-  char c = in.getline();
-  while (in.good())
-  {
-    std::cout << c;
-    c = in.getline();
+  
+  for (std::string s; in>>s;) {
+    std::cout << s << std::endl;
   }
   in.close();
   return 0;
