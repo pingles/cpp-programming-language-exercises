@@ -6,5 +6,6 @@ int main(int argc, char* argv[])
   for (int i = 0; i < 10000; i++) {
     out << i << std::endl;
   }
+  out.close();
   return 0;
 }

@@ -22,3 +22,8 @@ cc_binary(
         name = "9",
         srcs = ["9.cc"],
 )
+
+cc_binary(
+        name = "10",
+        srcs = ["10.cc"],
+)
