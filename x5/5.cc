@@ -1,18 +1,16 @@
 #include <iostream>
 
-using namespace std;
-
 int main()
 {
-    cout << "Please enter your name: ";
-    string name{""};
-    cin >> name;
+    std::cout << "Please enter your name: ";
+    std::string name{""};
+    std::cin >> name;
 
-    cout << "Please enter your age: ";
+    std::cout << "Please enter your age: ";
     int age = 0;
-    cin >> age;
+    std::cin >> age;
 
-    cout << "Hello, " << name << ", you're " << age << " years old" << endl;
+    std::cout << "Hello, " << name << ", you're " << age << " years old" << std::endl;
 
     return 0;
 }

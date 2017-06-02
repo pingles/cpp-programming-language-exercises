@@ -1,20 +1,18 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 int main()
 {
-  vector<string> pv{"Kant", "Plato", "Aristotle", "Kierkegard", "Hume"};
+  std::vector<std::string> pv{"Kant", "Plato", "Aristotle", "Kierkegard", "Hume"};
 
-  cout << "Unsorted..." << endl;
-  for (string s : pv)
-    cout << s << endl;
+  std::cout << "Unsorted..." << std::endl;
+  for (std::string s : pv)
+    std::cout << s << std::endl;
 
   sort(pv.begin(), pv.end());
-  cout << "Sorted..." << endl;
-  for (string s : pv)
-    cout << s << endl;
+  std::cout << "Sorted..." << std::endl;
+  for (std::string s : pv)
+    std::cout << s << std::endl;
 
   return 0;
 }

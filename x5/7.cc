@@ -1,22 +1,20 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 int main() {
-  vector<int> v{5, 9, -1, 200, 0};
+  std::vector<int> v{5, 9, -1, 200, 0};
 
-  cout << "Unsorted..." << endl;
+  std::cout << "Unsorted..." << std::endl;
 
   for (int i : v)
-    cout << i << endl;
+    std::cout << i << std::endl;
 
   sort(v.begin(), v.end());
 
-  cout << "Sorted..." << endl;
+  std::cout << "Sorted..." << std::endl;
 
   for (int i : v)
-    cout << i << endl;
+    std::cout << i << std::endl;
 
   return 0;
 }
