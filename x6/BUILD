@@ -14,3 +14,8 @@ cc_binary(
         srcs = ["2.cc"],
         copts = ["-O3"],
 )
+
+cc_binary(
+        name = "3",
+        srcs = ["3.cc"],
+)
