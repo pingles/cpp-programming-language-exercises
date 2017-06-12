@@ -1,0 +1,22 @@
+cxx_binary(
+  name = "1",
+  srcs = ["1.cc"],
+)
+
+cxx_binary(
+  name = "2_O0",
+  srcs = ["2.cc"],
+  compiler_flags = ["-O0"],
+)
+
+cxx_binary(
+  name = "2_O3",
+  srcs = ["2.cc"],
+  compiler_flags = ["-O3"],
+)
+
+cxx_binary(
+  name = "3",
+  srcs = ["3.cc"],
+)
+

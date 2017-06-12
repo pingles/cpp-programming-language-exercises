@@ -2,3 +2,5 @@ cmake-build-debug
 CMakelists*
 .idea
 bazel-*
+.buckd/
+buck-out/
