@@ -6,7 +6,7 @@ Exercises are available here:
 
 ## Building
 
-I'm using Buck to run builds. After installing it for your platform you should be able to run
+I'm using [Buck](https://buckbuild.com/) to run builds. After installing it for your platform you should be able to run
 
 ```
 $ buck build ...
