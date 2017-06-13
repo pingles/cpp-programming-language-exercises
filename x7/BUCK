@@ -1,0 +1,14 @@
+cxx_binary(
+  name = "2",
+  srcs = ["2.cc"],
+)
+
+cxx_binary(
+  name = "3",
+  srcs = ["3.cc"],
+)
+
+cxx_binary(
+  name = "8",
+  srcs = ["8.cc"],
+)
