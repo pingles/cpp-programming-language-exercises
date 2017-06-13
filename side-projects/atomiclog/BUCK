@@ -1,0 +1,11 @@
+cxx_library(
+  name = "log",
+  srcs = ["log.cc"],
+  exported_headers = ["log.h"],
+)
+
+cxx_test(
+  name = "log_tests",
+  srcs = ["log_test.cc"],
+  deps = [":log", "//vendor/gtest:googletest"],
+)
