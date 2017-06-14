@@ -7,3 +7,17 @@ cxx_binary(
   name = "2",
   srcs = ["2.cc"],
 )
+
+cxx_library(
+  name = "between",
+  srcs = ["between.cc"],
+  headers = ["between.h"],
+)
+
+cxx_binary(
+  name = "4",
+  srcs = ["4.cc"],
+  deps = [
+    ':between',
+  ],
+)
