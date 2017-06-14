@@ -28,3 +28,8 @@ cxx_binary(
     ':between',
   ],
 )
+
+cxx_binary(
+  name = "7",
+  srcs = ["7.cc"],
+)
