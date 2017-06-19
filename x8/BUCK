@@ -47,4 +47,11 @@ cxx_binary(
 cxx_binary(
   name = "12",
   srcs = ["12.cc"],
+  compiler_flags = ["-O3"],
+)
+
+cxx_binary(
+  name = "13",
+  srcs = ["13.cc"],
+  compiler_flags = ["-O3"],
 )

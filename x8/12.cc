@@ -9,10 +9,10 @@ int count_pairs(const std::string& s) {
   return pairs;
 }
 
-int count_pairs(const char* start, int size) {
+int count_pairs(const char start[]) {
   int pairs{0};
-  for (auto s = start+1; *s != '\0'; s++) {
-    if (*s-1 == *s)
+  for (auto s = start+1; *s != 0; s++) {
+    if (*(s-1) == *s)
       pairs++;
   }
   return pairs;

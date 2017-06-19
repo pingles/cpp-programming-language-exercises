@@ -4,3 +4,4 @@ CMakelists*
 bazel-*
 .buckd/
 buck-out/
+*.csv
