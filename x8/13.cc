@@ -3,7 +3,7 @@
 
 int count_pairs(const std::string& s) {
   int pairs{0};
-  for (int i = 1; i < s.size(); i++) {
+  for (auto i = 1; i < s.size(); i++) {
     if (s[i] == s[i-1])
       pairs++;
   }
@@ -21,7 +21,7 @@ int count_pairs_pointer(const char start[]) {
 
 int count_pairs_index(const char s[]) {
   int pairs{0};
-  for (int i = 1; s[i] != 0; i++) {
+  for (auto i = 1; s[i] != 0; i++) {
     if (s[i-1] == s[i])
       pairs++;
   }
@@ -31,7 +31,7 @@ int count_pairs_index(const char s[]) {
 int main()
 {
   std::string s{"xabaacbaxabb"};
-  
+
   for (int i = 0; i < 100000; i++) {
     auto start = std::chrono::high_resolution_clock::now();
     auto pairs = count_pairs(s);
@@ -54,6 +54,6 @@ int main()
     auto stop = std::chrono::high_resolution_clock::now();
     std::cout << "indexer," << i << "," << pairs << "," << std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start).count() << std::endl;
   }
-  
+
   return 0;
 }

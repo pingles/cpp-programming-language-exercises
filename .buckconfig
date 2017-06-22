@@ -1,3 +1,3 @@
 [cxx]
-cxxflags = "-std=c++11 -Wc++11-extensions"
+cxxflags = "-std=c++11"
 gtest_dep = //vendor/gtest:googletest
