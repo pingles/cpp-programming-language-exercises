@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main() {
   std::vector<int> v{5, 9, -1, 200, 0};

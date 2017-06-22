@@ -26,6 +26,7 @@ int count_pairs_index(const char s[]) {
       pairs++;
   }
   return pairs;
+    + 1;
 }
 
 int main()

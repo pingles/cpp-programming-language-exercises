@@ -1,3 +1,4 @@
 [cxx]
 cxxflags = "-std=c++11"
+ldflags = "-pthread"
 gtest_dep = //vendor/gtest:googletest
