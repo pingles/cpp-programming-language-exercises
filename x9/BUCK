@@ -7,3 +7,8 @@ cxx_binary(
   name = "2",
   srcs = ["2.cc"],
 )
+
+cxx_binary(
+  name = "4",
+  srcs = ["4.cc"],
+)
