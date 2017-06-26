@@ -1,6 +1,20 @@
 #include <iostream>
 
 enum class season {spring, summer, autumn, winter};
+season operator++(season& s)
+{
+  switch (s) {
+  case season::spring:
+    return season::summer;
+  case season::summer:
+    return season::autumn;
+  case season::autumn:
+    return season::winter;
+  case season::winter:
+    return season::spring;
+  }
+}
+
 
 struct local_season {
   season current;
@@ -17,9 +31,18 @@ struct local_season {
     autumn = aut;
     winter = win;
   }
+
+  local_season next();
 };
 
-std::ostream& operator<<(std::ostream& out, local_season& s)
+local_season local_season::next()
+{
+  local_season ret = *this;
+  ret.current = ++ret.current;
+  return ret;
+}
+
+std::ostream& operator<<(std::ostream& out, const local_season& s)
 {
   switch (s.current) {
   case season::spring:
@@ -34,31 +57,9 @@ std::ostream& operator<<(std::ostream& out, local_season& s)
   return out;
 }
 
-season operator++(season& s)
-{
-  switch (s) {
-  case season::spring:
-    return season::summer;
-  case season::summer:
-    return season::autumn;
-  case season::autumn:
-    return season::winter;
-  case season::winter:
-    return season::spring;
-  }
-}
-
-local_season operator++(const local_season& s)
-{
-  local_season ret = s;
-  ret.current = ++ret.current;
-  return ret;
-}
-
 int main()
 {
   local_season s{season::summer, "spring", "summer", "autumn", "winter"};
-  local_season next = ++s;
-  std::cout << "the next season from summer is: " << next << std::endl;
+  std::cout << "the next season from summer is: " << s.next() << std::endl;
   return 0;
 }
