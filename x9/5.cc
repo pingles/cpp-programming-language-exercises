@@ -1,18 +1,16 @@
 #include <iostream>
 
-enum class season {spring, summer, autumn, winter};
+enum class season {spring, summer, autumn, winter, NUM};
 season operator++(const season& s)
 {
-  switch (s) {
-  case season::spring:
-    return season::summer;
-  case season::summer:
-    return season::autumn;
-  case season::autumn:
-    return season::winter;
-  case season::winter:
-    return season::spring;
-  }
+  auto it = static_cast<int>(s);
+
+  if (it == static_cast<int>(season::NUM))
+    it = 0;
+  else
+    ++it;
+
+  return static_cast<season>(it);
 }
 
 
