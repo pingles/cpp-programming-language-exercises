@@ -1,7 +1,7 @@
 #include <iostream>
 
 enum class season {spring, summer, autumn, winter};
-season operator++(season& s)
+season operator++(const season& s)
 {
   switch (s) {
   case season::spring:
@@ -23,7 +23,7 @@ struct local_season {
   std::string autumn;
   std::string winter;
 
-  local_season(season cur, const std::string& spr, const std::string& sum, const std::string& aut, const std::string& win)
+  local_season(const season cur, const std::string& spr, const std::string& sum, const std::string& aut, const std::string& win)
   {
     current = cur;
     spring = spr;
