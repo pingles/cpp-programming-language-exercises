@@ -12,3 +12,9 @@ cxx_binary(
   name = "4",
   srcs = ["4.cc"],
 )
+
+cxx_binary(
+  name = "5",
+  srcs = ["5.cc"],
+)
+
