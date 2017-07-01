@@ -3,9 +3,9 @@
 
 int main()
 {
-  const int ints[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-  
+  const int ints[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+
   std::cout << between<int>(&ints[1], &ints[12]) << " ints between 1 and 12.\n";
-  
+
   return 0;
 }
